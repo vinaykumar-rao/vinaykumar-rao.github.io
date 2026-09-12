@@ -1,0 +1,14 @@
+CONTACT FORM
+
+The form sends messages to raoovinayyy@gmail.com using FormSubmit AJAX.
+Visitors stay on the portfolio. Only a successful service response opens the coffee-themed confirmation dialog:
+Form submitted successfully. Vinay will contact you soon.
+
+Open the whole website folder in VS Code, then use Live Server on index.html.
+Hard refresh with Ctrl+F5 after replacing old files.
+FormSubmit email activation is required. Check the receiving inbox after a real test; delivery has not been verified by the developer.
+The sender email is included as the Reply-To address.
+Errors appear below the form and preserve the message. No automatic redirect or resend occurs.
+Publish the full folder contents over HTTPS to share with visitors.
+
+Validation covered mocked success, service rejection, activation, network and timeout outcomes, plus the visible dialog and close control. No live test email was sent.

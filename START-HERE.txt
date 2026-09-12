@@ -1,0 +1,4 @@
+PREVIEW: Open index.html in your browser. Keep assets beside it. No installation needed.
+PUBLISH: Upload the CONTENTS of this folder to the repository root, preserving assets/. Keep CNAME and .nojekyll.
+All code is plain HTML, CSS and JavaScript. Avatar uses a rendered image with pointer-follow perspective, not a rigged 3D model.
+Motion respects reduced-motion preferences. Contact requires internet and FormSubmit email activation.
