@@ -170,6 +170,13 @@ Suggestions and bug reports are welcome. [Open an issue](https://github.com/vina
 - LinkedIn: [Vinay Kumar](https://www.linkedin.com/in/vinaykumar-raoo/)
 - GitHub: [vinaykumar-rao](https://github.com/vinaykumar-rao)
 
-## License
+## 📋 License
 
-This README does not grant an open-source license for the portfolio. Third-party assets remain subject to their respective licenses. Personal photographs, résumé, and certificates are not offered as reusable template assets.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+The website source code and original content I own, including my
+personal photos, avatar, résumé, and certificate-related content,
+are licensed under the [MIT License](LICENSE).
+
+Third-party fonts, icons, certificate designs, logos, and other
+third-party materials retain their respective licenses and rights.
