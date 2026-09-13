@@ -18,7 +18,6 @@ const portfolioData = {
       number: "01",
     },
     {
-          {
       title: "IPL Advanced Analytics Dashboard",
       category: "Analytics",
       eyebrow: "02 / SPORTS DATA",
@@ -28,7 +27,6 @@ const portfolioData = {
       url: "https://ipl-analytic-dashboard-jdwd7dmq5ppybnrnmfynfp.streamlit.app/",
       visual: "ipl",
       number: "02",
-    },
     },
     {
       title: "CareSync",
