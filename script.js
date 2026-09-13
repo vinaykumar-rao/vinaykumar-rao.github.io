@@ -2,7 +2,7 @@ const portfolioData = {
   skillGroups: {
     "Data Analytics": ["Python", "Pandas", "NumPy", "SQL", "Data Cleaning", "EDA"],
     Programming: ["Python", "SQL", "JavaScript", "HTML5/CSS3", "Firebase"],
-    Visualization: ["Power BI", "Matplotlib", "Excel", "Dashboards", "Data Storytelling"],
+    Visualization: ["Power BI", "Matplotlib", "Plotly", "Streamlit", "Excel", "Dashboards", "Data Storytelling"],
     "Cloud & Tools": ["GCP", "Git & GitHub", "VS Code", "Jupyter", "AI Tools"],
     "AI & ML": ["Python", "NumPy", "Pandas", "Matplotlib", "Jupyter", "Machine Learning", "Agentic AI", "LLMs", "AI Automation", "Statistical Modeling", "Generative AI"],
   },
@@ -18,14 +18,17 @@ const portfolioData = {
       number: "01",
     },
     {
+          {
       title: "IPL Advanced Analytics Dashboard",
       category: "Analytics",
       eyebrow: "02 / SPORTS DATA",
       description:
-        "A Python GUI dashboard for exploring team performance, player statistics, and match-level insights.",
-      tags: ["Python", "Pandas", "NumPy", "Matplotlib"],
+        "An interactive IPL dashboard exploring 1,095 matches from 2008–2024, with player comparisons, batting and bowling analysis, and season champions.",
+      tags: ["Python", "Pandas", "Plotly", "Streamlit", "Matplotlib"],
+      url: "https://ipl-analytic-dashboard-jdwd7dmq5ppybnrnmfynfp.streamlit.app/",
       visual: "ipl",
       number: "02",
+    },
     },
     {
       title: "CareSync",
@@ -172,8 +175,11 @@ const points = [
     "Used Excel and SQL for data processing and visualization.",
   ],
   [
-    "Built a Python GUI dashboard using Pandas, NumPy and Matplotlib.",
-    "Visualized team performance, player statistics and match insights.",
+    "Cleaned and validated 1,095 matches and 260,920 delivery records using Python and pandas.",
+    "Built an interactive Streamlit dashboard with Plotly charts and Matplotlib analysis reports.",
+    "Compared players within the same season using runs, strike rate, wickets and economy.",
+    "Added season champions, team photos, final-match leaders and filtered CSV downloads.",
+    "Applied data cleaning, exploratory data analysis, aggregation and visual storytelling.",
   ],
   [
     "Developed medication reminders, missed-dose alerts and caregiver notifications.",
@@ -192,6 +198,13 @@ $$('[data-testid^="project-details-button"]').forEach((b, i) =>
         return li;
       }),
     );
+        const project = portfolioData.projects[i];
+    const dialogLink = dialog.querySelector("a.button");
+    dialogLink.href = project.url || "https://github.com/vinaykumar-rao";
+    dialogLink.textContent = project.url
+      ? "Visit project ↗"
+      : "GitHub profile ↗";
+
     dialog.showModal();
   }),
 );
