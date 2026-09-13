@@ -88,3 +88,128 @@ h2{letter-spacing:-.055em}.section-label__dot,.experience-marker span{box-shadow
 @media(max-width:900px){.hero-section{min-height:0;gap:30px}.hero-copy h1{font-size:clamp(70px,11vw,110px)}#about{grid-template-columns:1fr}.about-avatar{width:min(65%,330px);margin:auto}.content-section{padding-block:75px}}
 @media(max-width:700px){.hero-section{display:flex;flex-direction:column;padding-top:42px;padding-bottom:35px;align-items:stretch}.hero-portrait-wrap{width:min(100%,430px);margin:0 auto;order:2}.hero-copy h1{font-size:clamp(72px,19vw,115px)}.portrait-frame{max-width:100%}.hero-proof{margin-top:24px}.marquee-track{animation-duration:48s;padding:19px 0}.marquee-group{gap:25px;padding-right:25px}.section-heading-row{align-items:flex-start;gap:25px}.filter-row{flex-wrap:wrap}#about{gap:22px}.contact-section{padding-block:65px}.site-header{padding-inline:16px}.brand-mark{font-size:19px}.header-resume{font-size:10px}.page-container{width:auto;margin-inline:20px}.projects-section>.page-container,.contact-section>.page-container{margin-inline:20px}}
 @media(prefers-reduced-motion:reduce){.marquee-track{animation:none;transform:none}.marquee-strip{overflow-x:auto}.marquee-group[aria-hidden]{display:none}.portrait-frame,.portrait-frame img{transform:none!important}.motion-ready .reveal{opacity:1;transform:none}.portrait-glow{animation:none}}
+/* Light-mode colours */
+.portfolio-shell.light-mode {
+  --clay: #71449c;
+  --sand: #654483;
+  color: #201629;
+}
+
+.portfolio-shell.light-mode #education,
+.portfolio-shell.light-mode .site-footer {
+  background: #faf7ff;
+  color: #201629;
+}
+
+.portfolio-shell.light-mode .education-card,
+.portfolio-shell.light-mode .contact-form {
+  background: #ffffff;
+  color: #201629;
+  border-color: #d9cce5;
+  box-shadow: 0 12px 35px rgba(65, 35, 90, 0.06);
+}
+
+.portfolio-shell.light-mode .contact-section {
+  background: linear-gradient(140deg, #f3eafa, #faf7ff);
+  color: #201629;
+}
+
+.portfolio-shell.light-mode .contact-copy h2 em {
+  color: #71449c;
+}
+
+.portfolio-shell.light-mode .contact-copy > p,
+.portfolio-shell.light-mode .contact-links small,
+.portfolio-shell.light-mode .contact-form label,
+.portfolio-shell.light-mode .form-note {
+  color: #65566f;
+}
+
+.portfolio-shell.light-mode .contact-links a {
+  color: #201629;
+  border-color: #d9cce5;
+}
+
+.portfolio-shell.light-mode .contact-form input,
+.portfolio-shell.light-mode .contact-form textarea {
+  color: #201629;
+  background: transparent;
+  border-bottom-color: #bcaacb;
+}
+
+.portfolio-shell.light-mode .contact-form input::placeholder,
+.portfolio-shell.light-mode .contact-form textarea::placeholder {
+  color: #716079;
+}
+
+.portfolio-shell.light-mode .contact-form input:focus,
+.portfolio-shell.light-mode .contact-form textarea:focus {
+  border-bottom-color: #71449c;
+}
+
+/* Readable contact text in dark mode */
+.portfolio-shell:not(.light-mode) .contact-copy > p,
+.portfolio-shell:not(.light-mode) .contact-links small {
+  color: #c6b8d2;
+}
+
+/* Project popup */
+#project-dialog {
+  border-radius: 20px;
+  background: #19131f;
+  color: #f5effb;
+  border-color: #806399;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.3);
+}
+
+/* The dialog sits outside .portfolio-shell in the HTML. */
+body:has(.portfolio-shell.light-mode) #project-dialog {
+  background: #ffffff;
+  color: #201629;
+  border-color: #d9cce5;
+}
+
+body:has(.portfolio-shell.light-mode) #project-dialog .section-label,
+body:has(.portfolio-shell.light-mode) #project-dialog .dialog-close {
+  color: #71449c;
+}
+
+#project-dialog[open] {
+  animation: project-dialog-enter 320ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+#project-dialog::backdrop {
+  background: rgba(15, 10, 22, 0.55);
+  backdrop-filter: blur(5px);
+}
+
+#project-dialog[open]::backdrop {
+  animation: project-backdrop-enter 280ms ease-out both;
+}
+
+@keyframes project-dialog-enter {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes project-backdrop-enter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #project-dialog[open],
+  #project-dialog[open]::backdrop {
+    animation: none;
+  }
+}
