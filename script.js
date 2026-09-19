@@ -236,7 +236,7 @@ contactForm.addEventListener("submit", async (event) => {
   submitButton.disabled = true;
   submitButton.textContent = "Sending…";
   contactForm.setAttribute("aria-busy", "true");
-  status.textContent = "";
+  status.textContent = "Sending your message securely…";
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 25000);
   try {
@@ -261,6 +261,7 @@ contactForm.addEventListener("submit", async (event) => {
         (providerMessage.slice(0, 250) || "Please try again or use the email link.");
       return;
     }
+    status.textContent = "Message sent. Thank you for getting in touch.";
     contactForm.reset();
     submissionDialog.classList.toggle(
       "submission-dialog--light",
