@@ -31,6 +31,7 @@
           ><button data-testid="nav-experience-link">Experience</button
           ><button data-testid="nav-projects-link">Projects</button
           ><button data-testid="nav-education-link">Education</button
+          ><button data-testid="nav-certifications-link">Certifications</button
           ><button data-testid="nav-contact-link">Contact</button>
         </nav>
         <div class="header-actions" data-testid="header-actions">
@@ -409,46 +410,29 @@
             </div>
           </div>
         </section>
-        <section
-          id="education"
-          class="content-section page-container"
-          data-testid="education-section"
-        >
-          <div class="section-label" data-testid="education-section-label">
-            <span class="section-label__dot"></span><span>05 / Education & credentials</span>
+        <section id="education" class="content-section page-container education-full" data-testid="education-section">
+          <div class="section-label"><span class="section-label__dot"></span><span>05 / Education</span></div>
+          <h2 data-testid="education-heading">Learning is the<br /><em>long game.</em></h2>
+          <div class="education-wide-list">
+            <div class="education-card" data-testid="education-card">
+              <span class="education-number" aria-hidden="true">01</span>
+              <div><span>BCA · COMPLETED</span><h3>Bachelor of Computer Applications</h3><p>JIMS Vasant Kunj · GGSIUP</p><strong>CGPA 8.71</strong></div>
+            </div>
+            <div class="education-card" data-testid="school-card">
+              <span class="education-number" aria-hidden="true">02</span>
+              <div><span>CBSE · MADINA, ROHTAK</span><h3>R.K.P Sr. Sec. School</h3><p>Class 12</p></div>
+            </div>
           </div>
-          <div class="education-layout">
-            <div>
-              <h2 data-testid="education-heading">Learning is the<br /><em>long game.</em></h2>
-              <div class="education-card" data-testid="education-card">
-                <span size="25" aria-hidden="true">◇</span>
-                <div>
-                  <span>BCA · COMPLETED</span>
-                  <h3>Bachelor of Computer Applications</h3>
-                  <p>JIMS Vasant Kunj · GGSIUP</p>
-                  <strong>CGPA 8.71</strong>
-                </div>
-              </div>
-              <div class="education-card education-card--school" data-testid="school-card">
-                <span size="20" aria-hidden="true">◇</span>
-                <div>
-                  <span>CBSE · MADINA, ROHTAK</span>
-                  <h3>R.K.P Sr. Sec. School</h3>
-                  <p>Class 12</p>
-                </div>
-                            </div>
-
-            <div class="certifications" data-testid="certifications-list">
-              <div class="certifications-heading">
-                <span>Certifications</span>
-                <span>2024–2026</span>
-              </div>
-
-              <div class="certification-columns">
-                <div class="certification-group">
-                  <h3 class="credential-group-title">AI &amp; Cloud</h3>
-
-                  <a class="certification-row"
+        </section>
+        <section id="certifications" class="content-section page-container credentials-section" aria-labelledby="credentials-title">
+          <div class="section-label"><span class="section-label__dot"></span><span>06 / Credentials</span></div>
+          <div class="section-heading-row credentials-heading">
+            <h2 id="credentials-title">Certificates.<br /><em>Learning in action.</em></h2>
+            <p>Ten milestones across AI, cloud, data and professional development.</p>
+          </div>
+          <div class="credentials-grid" data-testid="certifications-list">
+            <article class="credential-tile"><span class="credential-number">01 / AI & CLOUD</span>
+<a class="certification-row"
                      href="https://www.skills.google/public_profiles/336349b6-4f80-4316-b5c3-5b4c0ec5d795/badges/28119486"
                      target="_blank" rel="noopener noreferrer">
                     <div>
@@ -457,52 +441,9 @@
                     </div>
                     <span aria-hidden="true">↗</span>
                   </a>
-
-                  <a class="certification-row"
-                     href="https://www.skills.google/public_profiles/336349b6-4f80-4316-b5c3-5b4c0ec5d795/badges/28119384"
-                     target="_blank" rel="noopener noreferrer">
-                    <div>
-                      <strong>Machine Learning Operations (MLOps) for Generative AI</strong>
-                      <span>Google · Sep 2026</span>
-                    </div>
-                    <span aria-hidden="true">↗</span>
-                  </a>
-
-                  <a class="certification-row"
-                     href="https://www.skills.google/public_profiles/336349b6-4f80-4316-b5c3-5b4c0ec5d795/badges/24257101"
-                     target="_blank" rel="noopener noreferrer">
-                    <div>
-                      <strong>Google Cloud Skills Arcade</strong>
-                      <span>Google · 2026</span>
-                    </div>
-                    <span aria-hidden="true">↗</span>
-                  </a>
-
-                  <a class="certification-row"
-                     href="https://learn.microsoft.com/api/credentials/share/en-in/VinayKumar-0509/11AA3CEFEB3701FB?sharingId=68BECC2D4AD1C259"
-                     target="_blank" rel="noopener noreferrer">
-                    <div>
-                      <strong>Generate reports with AI research agents</strong>
-                      <span>Microsoft · 2026</span>
-                    </div>
-                    <span aria-hidden="true">↗</span>
-                  </a>
-
-                  <a class="certification-row"
-                     href="assets/generative-ai.pdf"
-                     target="_blank" rel="noopener noreferrer">
-                    <div>
-                      <strong>Generative AI Mastermind</strong>
-                      <span>OutSkill · 2025</span>
-                    </div>
-                    <span aria-hidden="true">↗</span>
-                  </a>
-                </div>
-
-                <div class="certification-group">
-                  <h3 class="credential-group-title">Data &amp; Professional Skills</h3>
-
-                  <a class="certification-row"
+            </article>
+            <article class="credential-tile"><span class="credential-number">02 / DATA & PROFESSIONAL SKILLS</span>
+<a class="certification-row"
                      href="assets/alethe-labs-internship.pdf"
                      target="_blank" rel="noopener noreferrer">
                     <div>
@@ -511,8 +452,20 @@
                     </div>
                     <span aria-hidden="true">↗</span>
                   </a>
-
-                  <a class="certification-row"
+            </article>
+            <article class="credential-tile"><span class="credential-number">03 / AI & CLOUD</span>
+<a class="certification-row"
+                     href="https://www.skills.google/public_profiles/336349b6-4f80-4316-b5c3-5b4c0ec5d795/badges/28119384"
+                     target="_blank" rel="noopener noreferrer">
+                    <div>
+                      <strong>Machine Learning Operations (MLOps) for Generative AI</strong>
+                      <span>Google · Sep 2026</span>
+                    </div>
+                    <span aria-hidden="true">↗</span>
+                  </a>
+            </article>
+            <article class="credential-tile"><span class="credential-number">04 / DATA & PROFESSIONAL SKILLS</span>
+<a class="certification-row"
                      href="assets/excel-using-ai.pdf"
                      target="_blank" rel="noopener noreferrer">
                     <div>
@@ -521,8 +474,20 @@
                     </div>
                     <span aria-hidden="true">↗</span>
                   </a>
-
-                  <a class="certification-row"
+            </article>
+            <article class="credential-tile"><span class="credential-number">05 / AI & CLOUD</span>
+<a class="certification-row"
+                     href="https://www.skills.google/public_profiles/336349b6-4f80-4316-b5c3-5b4c0ec5d795/badges/24257101"
+                     target="_blank" rel="noopener noreferrer">
+                    <div>
+                      <strong>Google Cloud Skills Arcade</strong>
+                      <span>Google · 2026</span>
+                    </div>
+                    <span aria-hidden="true">↗</span>
+                  </a>
+            </article>
+            <article class="credential-tile"><span class="credential-number">06 / DATA & PROFESSIONAL SKILLS</span>
+<a class="certification-row"
                      href="assets/ibm-it-fundamentals.pdf"
                      target="_blank" rel="noopener noreferrer">
                     <div>
@@ -531,8 +496,20 @@
                     </div>
                     <span aria-hidden="true">↗</span>
                   </a>
-
-                  <a class="certification-row"
+            </article>
+            <article class="credential-tile"><span class="credential-number">07 / AI & CLOUD</span>
+<a class="certification-row"
+                     href="https://learn.microsoft.com/api/credentials/share/en-in/VinayKumar-0509/11AA3CEFEB3701FB?sharingId=68BECC2D4AD1C259"
+                     target="_blank" rel="noopener noreferrer">
+                    <div>
+                      <strong>Generate reports with AI research agents</strong>
+                      <span>Microsoft · 2026</span>
+                    </div>
+                    <span aria-hidden="true">↗</span>
+                  </a>
+            </article>
+            <article class="credential-tile"><span class="credential-number">08 / DATA & PROFESSIONAL SKILLS</span>
+<a class="certification-row"
                      href="assets/british-airways.pdf"
                      target="_blank" rel="noopener noreferrer">
                     <div>
@@ -541,8 +518,20 @@
                     </div>
                     <span aria-hidden="true">↗</span>
                   </a>
-
-                  <a class="certification-row"
+            </article>
+            <article class="credential-tile"><span class="credential-number">09 / AI & CLOUD</span>
+<a class="certification-row"
+                     href="assets/generative-ai.pdf"
+                     target="_blank" rel="noopener noreferrer">
+                    <div>
+                      <strong>Generative AI Mastermind</strong>
+                      <span>OutSkill · 2025</span>
+                    </div>
+                    <span aria-hidden="true">↗</span>
+                  </a>
+            </article>
+            <article class="credential-tile"><span class="credential-number">10 / DATA & PROFESSIONAL SKILLS</span>
+<a class="certification-row"
                      href="assets/nsic-industrial-visit.pdf"
                      target="_blank" rel="noopener noreferrer">
                     <div>
@@ -551,15 +540,13 @@
                     </div>
                     <span aria-hidden="true">↗</span>
                   </a>
-                </div>
-              </div>
-            </div>
+            </article>
           </div>
         </section>
         <section id="contact" class="contact-section" data-testid="contact-section">
           <div class="page-container">
             <div class="section-label" data-testid="contact-section-label">
-              <span class="section-label__dot"></span><span>06 / Contact</span>
+              <span class="section-label__dot"></span><span>07 / Contact</span>
             </div>
             <div class="contact-layout">
               <div class="contact-copy">
