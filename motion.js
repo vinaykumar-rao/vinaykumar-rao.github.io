@@ -3,21 +3,40 @@
   const frame = document.querySelector(".portrait-frame");
   const hero = document.querySelector("#home");
 
-  // Add download links beneath PDF certificates.
-  document
-    .querySelectorAll('.certification-row[href$=".pdf"]')
-    .forEach((link) => {
-      const actions = document.createElement("div");
-      actions.className = "certificate-actions";
+  // Keep documents inside the portfolio in an accessible preview dialog.
+  const documentDialog = document.querySelector("#document-dialog");
+  const documentFrame = document.querySelector("#document-frame");
+  const documentTitle = document.querySelector("#document-title");
+  const documentDownload = document.querySelector("#document-download");
+  const documentOpen = document.querySelector("#document-open");
+  const documentClose = document.querySelector("#document-close");
 
-      const download = document.createElement("a");
-      download.href = link.getAttribute("href");
-      download.download = "";
-      download.textContent = "Download certificate PDF ↓";
+  function previewDocument(link) {
+    const href = link.getAttribute("href");
+    if (!href || !documentDialog) return;
+    const title = link.dataset.documentTitle || link.querySelector("strong")?.textContent || link.textContent.trim();
+    documentTitle.textContent = title;
+    documentFrame.src = href;
+    documentFrame.title = title;
+    documentDownload.href = href;
+    documentOpen.href = href;
+    documentDialog.showModal();
+  }
 
-      actions.append(download);
-      link.after(actions);
+  document.querySelectorAll(".header-resume, .certification-row").forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      previewDocument(link);
     });
+  });
+
+  documentClose.addEventListener("click", () => documentDialog.close());
+  documentDialog.addEventListener("close", () => {
+    documentFrame.src = "about:blank";
+  });
+  documentDialog.addEventListener("click", (event) => {
+    if (event.target === documentDialog) documentDialog.close();
+  });
 
   // Add decorative eyes to the portrait.
   const eyes = document.createElement("div");
